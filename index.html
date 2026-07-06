@@ -19,6 +19,7 @@
     body { font-family: 'Lato', sans-serif; background: var(--krem); color: var(--metin); font-size: 15px; line-height: 1.75; }
 
     nav { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; padding: 0 2.5rem; height: 64px; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; }
     .nav-logo strong { font-size: 15px; font-weight: 700; color: var(--kahve); display: block; }
     .nav-logo span { font-size: 11px; color: var(--kahve-muted); letter-spacing: 1px; text-transform: uppercase; }
     .nav-links { display: flex; gap: 1.75rem; }
@@ -28,7 +29,8 @@
     .hero { background: linear-gradient(135deg, #f5e6d3 0%, #ede0d0 100%); padding: 5rem 2.5rem; }
     .hero-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; gap: 3.5rem; }
     .hero-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: top center; border: 5px solid #fff; flex-shrink: 0; box-shadow: 0 4px 24px rgba(139,69,19,.18); }
-    .hero-unvan { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--kahve-muted); margin-bottom: 8px; }
+    .hero-logo { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .hero-unvan { font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; color: var(--kahve-muted); margin-bottom: 0; }
     .hero-isim { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 500; color: var(--kahve-koyu); margin-bottom: 12px; }
     .hero-text p { font-size: 15px; color: var(--metin); max-width: 520px; }
     .uzmanlik-badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
@@ -86,6 +88,7 @@
       .hero { padding: 3rem 1rem; }
       .hero-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
       .hero-photo { width: 160px; height: 160px; }
+      .hero-logo { justify-content: center; }
       section { padding: 2.5rem 1rem; }
       .contact-box, .lokasyon-grid { grid-template-columns: 1fr; }
     }
@@ -95,8 +98,17 @@
 
 <nav>
   <div class="nav-logo">
-    <strong>Neslihan Karakaş</strong>
-    <span>Klinik Psikolog</span>
+    <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+      <rect width="64" height="64" rx="14" fill="#8b4513"/>
+      <path d="M32 48 Q14 36 16 18 Q28 14 38 22 Q48 30 32 48Z" fill="#f5e6d3"/>
+      <line x1="32" y1="48" x2="28" y2="22" stroke="#8b4513" stroke-width="1.5" stroke-linecap="round"/>
+      <line x1="28" y1="32" x2="22" y2="28" stroke="#8b4513" stroke-width="1" stroke-linecap="round"/>
+      <line x1="30" y1="26" x2="25" y2="22" stroke="#8b4513" stroke-width="1" stroke-linecap="round"/>
+    </svg>
+    <div>
+      <strong>Neslihan Karakaş</strong>
+      <span>Klinik Psikolog</span>
+    </div>
   </div>
   <div class="nav-links">
     <a href="#hakkimda">Hakkımda</a>
@@ -111,7 +123,16 @@
   <div class="hero-inner">
     <img src="neslihan.jpg" alt="Neslihan Karakaş – Klinik Psikolog" class="hero-photo" />
     <div class="hero-text">
-      <div class="hero-unvan">Klinik Psikolog</div>
+      <div class="hero-logo">
+        <svg width="48" height="48" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <rect width="64" height="64" rx="14" fill="#8b4513"/>
+          <path d="M32 48 Q14 36 16 18 Q28 14 38 22 Q48 30 32 48Z" fill="#f5e6d3"/>
+          <line x1="32" y1="48" x2="28" y2="22" stroke="#8b4513" stroke-width="1.5" stroke-linecap="round"/>
+          <line x1="28" y1="32" x2="22" y2="28" stroke="#8b4513" stroke-width="1" stroke-linecap="round"/>
+          <line x1="30" y1="26" x2="25" y2="22" stroke="#8b4513" stroke-width="1" stroke-linecap="round"/>
+        </svg>
+        <div class="hero-unvan">Klinik Psikolog</div>
+      </div>
       <h1 class="hero-isim">Neslihan Karakaş</h1>
       <p>Çocuk ve ergen terapisinde uzman Klinik Psikologum. DEB (Dikkat Eksikliği Bozukluğu), bireysel terapi ve online seans hizmetleri sunuyorum. Şişli ve Göztepe'de yüz yüze seans imkânı.</p>
       <div class="uzmanlik-badges">
